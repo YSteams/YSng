@@ -1,0 +1,111 @@
+<div> 
+<hr>
+				 <div class="am-g">
+        <div class="am-u-sm-12 am-u-md-6">
+          <div class="am-btn-toolbar">
+            <div class="am-btn-group am-btn-group-xs">
+              <button type="button" ysadd='YS_plista.data.datalist' class="am-btn am-btn-default"><span class="am-icon-plus"></span> 新增</button>
+             <!--  <button type="button" class="am-btn am-btn-default"><span class="am-icon-save"></span> 保存</button>
+              <button type="button" class="am-btn am-btn-default"><span class="am-icon-archive"></span> 审核</button> -->
+              <button type="button" ysdel='YS_plista.data.datalist' delkey="id" class="am-btn am-btn-default"><span class="am-icon-trash-o"></span> 删除</button>
+            </div>
+          </div>
+        </div>
+        <div class="am-u-sm-12 am-u-md-3">
+          <div class="am-form-group">
+            <select data-am-selected="{btnSize: 'sm'}" ysselrun="YS_plista.params.pid">
+              <option value="option1">所有类别</option>
+              <option value="option2">IT业界</option>
+              <option value="option3">数码产品</option>
+              <option value="option3">笔记本电脑</option>
+              <option value="option3">平板电脑</option>
+              <option value="option3">只能手机</option>
+              <option value="option3">超极本</option>
+            </select>
+          </div>
+        </div>
+        <div class="am-u-sm-12 am-u-md-3">
+         <!--  <div class="am-input-group am-input-group-sm">
+            <input ng-model='YS_plista.params.keyword' enterrun="YS_plista" type="text" class="am-form-field">
+          <span class="am-input-group-btn">
+            <button class="am-btn am-btn-default" ng-click="fetch('YS_plista')" type="button">搜索</button>
+          </span>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="am-g">
+        <div class="am-u-sm-12">
+          <form class="am-form">
+            <table class="am-table am-table-striped am-table-hover table-main">
+              <thead>
+              <tr>
+                   <th width="50" scope="col" style="padding: 6px;">
+                   	<label>
+                   		<input type="checkbox" yschkall="YS_plista.data.datalist" class="colored-blue">                   
+                   		<span class="text"></span>
+                   	</label>
+                   </th>
+                   <th width="8%">排序</th>
+                   <th>材料名称</th>
+                   <th width="8%">分部</th>
+                   <th width="8%">材料类型</th>
+                   <th>使用部位</th>
+                   <th>型号</th>
+                   <th>规格</th>
+                   <th>数量</th>
+                   <th>强度</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr ng-if="value.isdel!=1"  align="center" ng-repeat="(key, value) in YS_plista.data.datalist">
+
+        <td  align="center">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" class="colored-blue" v="{{value.ischk}}" ng-click="value.ischk=!value.ischk" ng-checked="value.ischk">
+              <span class="text"></span>
+            </label>
+          </div>
+
+        </td>
+        <td width="8%">
+          <input type="text" comedit="morder" value="{{value.morder}}" class="form-control"></td>
+        <td>
+          <input type="text" comedit="mname" value="{{value.mname}}" class="form-control"></td>
+        <td width="8%">
+          <select id="e1" style="width:100%;"  comedit="fid">
+            <option value="{{val.t}}" ng-repeat="(k, val) in ftypelist" ng-selected="value.fid==val.t">{{val.title}}</option>
+          </select>
+        </td>
+        <td width="8%">
+          <select style="width:100%;" comedit="yctype">
+            <option value="{{val.t}}" ng-repeat="(k, val) in yctypelist" ng-selected="value.yctype==val.t">{{val.title}}</option>
+          </select>
+        </td>
+        <td >
+          <input type="text" comedit="buwei" value="{{value.buwei}}" class="form-control"></td>
+        <td>
+          <input type="text" comedit="xinghao" value="{{value.xinghao}}" class="form-control">
+        </td>   
+        <td>
+          <input type="text" comedit="guige" value="{{value.guige}}" class="form-control">
+        </td> 
+        <td>
+          <input type="text" comedit="number" value="{{value.number}}" class="form-control">
+        </td> 
+        <td>
+          <!-- <input type="text" comedit="qiangdu" value="{{value.qiangdu}}" class="form-control"> -->
+          <button type="" ysdelone='id'>删除</button>
+        </td>                                      
+      </tr>
+              </tbody>
+            </table>
+             <div style="text-align: center;" id="YS_plista">
+             	
+             </div>
+          </form>
+        </div>
+
+      </div>
+        </div>

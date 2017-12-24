@@ -1,0 +1,250 @@
+{
+    "code": 1,
+    "msg": "",
+    "data": {
+        "total": 17761,
+        "pages": 592.03333333333,
+        "datalist": [
+            {
+                "username": "weijinhuan",
+                "realname": "韦欢",
+                "logintime": "2017-12-23 05:12:04",
+                "loginip": "163.125.118.7",
+                "logtype": "1",
+                "codeid": "43ntw3XaDL3SVX22K6w_aFA"
+            },
+            {
+                "username": "ys10292",
+                "realname": "",
+                "logintime": "2017-12-23 05:12:01",
+                "loginip": "113.103.196.123",
+                "logtype": "4",
+                "codeid": "si6_aknfaDOnSVX22K6w_aFw"
+            },
+            {
+                "username": "ys10089",
+                "realname": "",
+                "logintime": "2017-12-23 04:12:47",
+                "loginip": "112.96.179.49",
+                "logtype": "2",
+                "codeid": "sX6_bkyCPA77SVX22K6w_aFg"
+            },
+            {
+                "username": "weijinhuan",
+                "realname": "韦欢",
+                "logintime": "2017-12-23 04:12:32",
+                "loginip": "183.13.216.249",
+                "logtype": "4",
+                "codeid": "5C2_blyCIBb_aSVX22K602Hw"
+            },
+            {
+                "username": "ys10264",
+                "realname": "",
+                "logintime": "2017-12-23 04:12:43",
+                "loginip": "117.136.79.100",
+                "logtype": "4",
+                "codeid": "snO5lnGJBb7SVX22K602Hg"
+            },
+            {
+                "username": "weijinhuan",
+                "realname": "韦欢",
+                "logintime": "2017-12-23 04:12:42",
+                "loginip": "183.13.216.249",
+                "logtype": "4",
+                "codeid": "t36_blHHZUOnSVX22K602EQ"
+            },
+            {
+                "username": "weiyuliang",
+                "realname": "韦宇亮",
+                "logintime": "2017-12-23 04:12:07",
+                "loginip": "183.13.216.249",
+                "logtype": "4",
+                "codeid": "5XPtn3LfAOnSVX22K602EA"
+            },
+            {
+                "username": "weijinhuan",
+                "realname": "韦欢",
+                "logintime": "2017-12-23 03:12:05",
+                "loginip": "183.13.216.249",
+                "logtype": "4",
+                "codeid": "6ny4lCTVBb7SVX22K602Ew"
+            },
+            {
+                "username": "weijinhuan",
+                "realname": "韦欢",
+                "logintime": "2017-12-23 02:12:27",
+                "loginip": "112.96.112.64",
+                "logtype": "4",
+                "codeid": "5Cm_awnKPArnSVX22K602Eg"
+            },
+            {
+                "username": "weiyuliang",
+                "realname": "韦宇亮",
+                "logintime": "2017-12-23 12:12:03",
+                "loginip": "183.13.216.249",
+                "logtype": "1",
+                "codeid": "5n29wifaB_bzSVX22K602FQ"
+            },
+            {
+                "username": "ys10252",
+                "realname": "",
+                "logintime": "2017-12-23 12:12:57",
+                "loginip": "183.13.216.249",
+                "logtype": "1",
+                "codeid": "6i_aqwySMULrSVX22K602FA"
+            },
+            {
+                "username": "ys10151",
+                "realname": "",
+                "logintime": "2017-12-23 11:12:37",
+                "loginip": "14.154.176.87",
+                "logtype": "2",
+                "codeid": "433qlyKIU_bvSVX22K602Fw"
+            },
+            {
+                "username": "weiyuliang",
+                "realname": "韦宇亮",
+                "logintime": "2017-12-23 10:12:00",
+                "loginip": "183.13.216.249",
+                "logtype": "1",
+                "codeid": "6iq6n36MBr_aSVX22K602Fg"
+            },
+            {
+                "username": "ys10291",
+                "realname": "",
+                "logintime": "2017-12-23 08:12:50",
+                "loginip": "117.136.41.58",
+                "logtype": "4",
+                "codeid": "5n7uwyXeA_bnSVX22K603Hw"
+            },
+            {
+                "username": "ys10290",
+                "realname": "",
+                "logintime": "2017-12-22 10:12:01",
+                "loginip": "14.122.136.196",
+                "logtype": "4",
+                "codeid": "4S3pniePVO_aSVX22K603Hg"
+            },
+            {
+                "username": "ys10290",
+                "realname": "",
+                "logintime": "2017-12-22 10:12:42",
+                "loginip": "14.122.136.196",
+                "logtype": "4",
+                "codeid": "4Xy_bliXcVOzSVX22K603EQ"
+            },
+            {
+                "username": "ys10290",
+                "realname": "",
+                "logintime": "2017-12-22 10:12:34",
+                "loginip": "14.122.136.196",
+                "logtype": "4",
+                "codeid": "5C67wCXfV7zSVX22K603EA"
+            },
+            {
+                "username": "ys10290",
+                "realname": "",
+                "logintime": "2017-12-22 10:12:02",
+                "loginip": "14.122.136.196",
+                "logtype": "4",
+                "codeid": "5Xy_awHLaVL3SVX22K603Ew"
+            },
+            {
+                "username": "ys10290",
+                "realname": "",
+                "logintime": "2017-12-22 09:12:34",
+                "loginip": "14.122.136.196",
+                "logtype": "2",
+                "codeid": "t3O5wyPZU7_aSVX22K603Eg"
+            },
+            {
+                "username": "ys10290",
+                "realname": "",
+                "logintime": "2017-12-22 09:12:56",
+                "loginip": "14.122.136.196",
+                "logtype": "4",
+                "codeid": "tnzql3aPVOnSVX22K603FQ"
+            },
+            {
+                "username": "ys10290",
+                "realname": "",
+                "logintime": "2017-12-22 09:12:00",
+                "loginip": "14.122.136.196",
+                "logtype": "4",
+                "codeid": "sni7wnOJV_b7SVX22K603FA"
+            },
+            {
+                "username": "ys10290",
+                "realname": "",
+                "logintime": "2017-12-22 09:12:43",
+                "loginip": "14.122.136.196",
+                "logtype": "4",
+                "codeid": "sn20lX_aeBOnSVX22K603Fw"
+            },
+            {
+                "username": "ys10290",
+                "realname": "",
+                "logintime": "2017-12-22 09:12:04",
+                "loginip": "14.122.136.196",
+                "logtype": "4",
+                "codeid": "4n_b0wHTbV_bvSVX22K603Fg"
+            },
+            {
+                "username": "weiyuliang",
+                "realname": "韦宇亮",
+                "logintime": "2017-12-22 09:12:04",
+                "loginip": "183.13.216.249",
+                "logtype": "4",
+                "codeid": "53K_bxX6IDe_aSVX22K604Hw"
+            },
+            {
+                "username": "ys10290",
+                "realname": "",
+                "logintime": "2017-12-22 07:12:14",
+                "loginip": "223.104.64.72",
+                "logtype": "4",
+                "codeid": "tyq8kiDYVOjSVX22K604Hg"
+            },
+            {
+                "username": "ys10289",
+                "realname": "",
+                "logintime": "2017-12-22 06:12:52",
+                "loginip": "117.136.31.229",
+                "logtype": "4",
+                "codeid": "5XzqlnSLA_bnSVX22K604EQ"
+            },
+            {
+                "username": "ys10289",
+                "realname": "",
+                "logintime": "2017-12-22 06:12:32",
+                "loginip": "117.136.31.229",
+                "logtype": "4",
+                "codeid": "5Xi9wHPaALvSVX22K604EA"
+            },
+            {
+                "username": "ys10288",
+                "realname": "",
+                "logintime": "2017-12-22 05:12:27",
+                "loginip": "110.72.27.109",
+                "logtype": "4",
+                "codeid": "633qwyCPVLPSVX22K604Ew"
+            },
+            {
+                "username": "ys10287",
+                "realname": "",
+                "logintime": "2017-12-22 05:12:19",
+                "loginip": "113.111.183.40",
+                "logtype": "1",
+                "codeid": "6i_aowHfUUejSVX22K604Eg"
+            },
+            {
+                "username": "weijinhuan",
+                "realname": "韦欢",
+                "logintime": "2017-12-22 05:12:11",
+                "loginip": "183.14.29.27",
+                "logtype": "1",
+                "codeid": "5Xu8wnXfDbLSVX22K604FQ"
+            }
+        ]
+    }
+}

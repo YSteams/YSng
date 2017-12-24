@@ -1,0 +1,210 @@
+{
+    "code": "1",
+    "msg": "",
+    "data": [
+        {
+            "pid": 1,
+            "province": "北京市",
+            "DateCreated": null,
+            "DateUpdated": null
+        },
+        {
+            "pid": 2,
+            "province": "天津市",
+            "DateCreated": null,
+            "DateUpdated": null
+        },
+        {
+            "pid": 3,
+            "province": "河北省",
+            "DateCreated": null,
+            "DateUpdated": null
+        },
+        {
+            "pid": 4,
+            "province": "山西省",
+            "DateCreated": null,
+            "DateUpdated": null
+        },
+        {
+            "pid": 5,
+            "province": "内蒙古自治区",
+            "DateCreated": null,
+            "DateUpdated": null
+        },
+        {
+            "pid": 6,
+            "province": "辽宁省",
+            "DateCreated": null,
+            "DateUpdated": null
+        },
+        {
+            "pid": 7,
+            "province": "吉林省",
+            "DateCreated": null,
+            "DateUpdated": null
+        },
+        {
+            "pid": 8,
+            "province": "黑龙江省",
+            "DateCreated": null,
+            "DateUpdated": null
+        },
+        {
+            "pid": 9,
+            "province": "上海市",
+            "DateCreated": null,
+            "DateUpdated": null
+        },
+        {
+            "pid": 10,
+            "province": "江苏省",
+            "DateCreated": null,
+            "DateUpdated": null
+        },
+        {
+            "pid": 11,
+            "province": "浙江省",
+            "DateCreated": null,
+            "DateUpdated": null
+        },
+        {
+            "pid": 12,
+            "province": "安徽省",
+            "DateCreated": null,
+            "DateUpdated": null
+        },
+        {
+            "pid": 13,
+            "province": "福建省",
+            "DateCreated": null,
+            "DateUpdated": null
+        },
+        {
+            "pid": 14,
+            "province": "江西省",
+            "DateCreated": null,
+            "DateUpdated": null
+        },
+        {
+            "pid": 15,
+            "province": "山东省",
+            "DateCreated": null,
+            "DateUpdated": null
+        },
+        {
+            "pid": 16,
+            "province": "河南省",
+            "DateCreated": null,
+            "DateUpdated": null
+        },
+        {
+            "pid": 17,
+            "province": "湖北省",
+            "DateCreated": null,
+            "DateUpdated": null
+        },
+        {
+            "pid": 18,
+            "province": "湖南省",
+            "DateCreated": null,
+            "DateUpdated": null
+        },
+        {
+            "pid": 19,
+            "province": "广东省",
+            "DateCreated": null,
+            "DateUpdated": null
+        },
+        {
+            "pid": 20,
+            "province": "广西壮族自治区",
+            "DateCreated": null,
+            "DateUpdated": null
+        },
+        {
+            "pid": 21,
+            "province": "海南省",
+            "DateCreated": null,
+            "DateUpdated": null
+        },
+        {
+            "pid": 22,
+            "province": "重庆市",
+            "DateCreated": null,
+            "DateUpdated": null
+        },
+        {
+            "pid": 23,
+            "province": "四川省",
+            "DateCreated": null,
+            "DateUpdated": null
+        },
+        {
+            "pid": 24,
+            "province": "贵州省",
+            "DateCreated": null,
+            "DateUpdated": null
+        },
+        {
+            "pid": 25,
+            "province": "云南省",
+            "DateCreated": null,
+            "DateUpdated": null
+        },
+        {
+            "pid": 26,
+            "province": "西藏自治区",
+            "DateCreated": null,
+            "DateUpdated": null
+        },
+        {
+            "pid": 27,
+            "province": "陕西省",
+            "DateCreated": null,
+            "DateUpdated": null
+        },
+        {
+            "pid": 28,
+            "province": "甘肃省",
+            "DateCreated": null,
+            "DateUpdated": null
+        },
+        {
+            "pid": 29,
+            "province": "青海省",
+            "DateCreated": null,
+            "DateUpdated": null
+        },
+        {
+            "pid": 30,
+            "province": "宁夏回族自治区",
+            "DateCreated": null,
+            "DateUpdated": null
+        },
+        {
+            "pid": 31,
+            "province": "新疆维吾尔自治区",
+            "DateCreated": null,
+            "DateUpdated": null
+        },
+        {
+            "pid": 32,
+            "province": "香港特别行政区",
+            "DateCreated": null,
+            "DateUpdated": null
+        },
+        {
+            "pid": 33,
+            "province": "澳门特别行政区",
+            "DateCreated": null,
+            "DateUpdated": null
+        },
+        {
+            "pid": 34,
+            "province": "台湾省",
+            "DateCreated": null,
+            "DateUpdated": null
+        }
+    ]
+}

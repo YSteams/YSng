@@ -1,0 +1,340 @@
+{
+    "code": 1,
+    "msg": "",
+    "data": {
+        "total": 702,
+        "pages": 23.4,
+        "datalist": [
+            {
+                "cityid": 197,
+                "city": "广州市",
+                "prid": 1132,
+                "prname": "华南理工大学36号楼实验楼室内装修及2号楼修缮工程",
+                "username": "ys10089",
+                "realname": "",
+                "sgname": "",
+                "gcdizhi": "",
+                "add_time": "2017-12-23 17:01:28"
+            },
+            {
+                "cityid": 204,
+                "city": "湛江市",
+                "prid": 1131,
+                "prname": "华源豪庭住宅区四期工程",
+                "username": "ys10290",
+                "realname": "",
+                "sgname": "广东广基建设集团有限公司",
+                "gcdizhi": "廉江市廉江大道南28号",
+                "add_time": "2017-12-22 19:01:37"
+            },
+            {
+                "cityid": 202,
+                "city": "佛山市",
+                "prid": 1130,
+                "prname": "佛山市三水区云东海学校",
+                "username": "ys10288",
+                "realname": "",
+                "sgname": "",
+                "gcdizhi": "",
+                "add_time": "2017-12-22 18:00:23"
+            },
+            {
+                "cityid": 197,
+                "city": "广州市",
+                "prid": 1129,
+                "prname": "特种管子车间工程",
+                "username": "ys10287",
+                "realname": "",
+                "sgname": "",
+                "gcdizhi": "",
+                "add_time": "2017-12-22 17:39:45"
+            },
+            {
+                "cityid": 197,
+                "city": "广州市",
+                "prid": 1128,
+                "prname": "石壁街都那村农村生活污水治理工程",
+                "username": "ys10287",
+                "realname": "",
+                "sgname": "",
+                "gcdizhi": "",
+                "add_time": "2017-12-22 17:36:23"
+            },
+            {
+                "cityid": 207,
+                "city": "惠州市",
+                "prid": 1127,
+                "prname": "刘有伟综合楼",
+                "username": "ys10230",
+                "realname": "",
+                "sgname": "",
+                "gcdizhi": "",
+                "add_time": "2017-12-21 21:12:50"
+            },
+            {
+                "cityid": 199,
+                "city": "深圳市",
+                "prid": 1126,
+                "prname": "鲁莽",
+                "username": "guyuan",
+                "realname": "",
+                "sgname": "",
+                "gcdizhi": "",
+                "add_time": "2017-12-21 21:12:12"
+            },
+            {
+                "cityid": 250,
+                "city": "雅安市",
+                "prid": 1125,
+                "prname": "龙湾湖国际社区（5.6号楼）",
+                "username": "ys10280",
+                "realname": "",
+                "sgname": "",
+                "gcdizhi": "",
+                "add_time": "2017-12-21 19:03:20"
+            },
+            {
+                "cityid": 134,
+                "city": "上饶市",
+                "prid": 1122,
+                "prname": "鄱阳县污水处理厂",
+                "username": "ys10276",
+                "realname": "",
+                "sgname": "",
+                "gcdizhi": "",
+                "add_time": "2017-12-20 21:42:50"
+            },
+            {
+                "cityid": 88,
+                "city": "宁波市",
+                "prid": 1121,
+                "prname": "宁波市集士港项目",
+                "username": "ys10114",
+                "realname": "",
+                "sgname": "",
+                "gcdizhi": "",
+                "add_time": "2017-12-20 14:52:36"
+            },
+            {
+                "cityid": 198,
+                "city": "韶关市",
+                "prid": 1120,
+                "prname": "旭日领裕园商住楼工程",
+                "username": "ys10254",
+                "realname": "",
+                "sgname": " 施工单位信息 施工单位",
+                "gcdizhi": "广东中山市广东中山市广东中广东中广东中山市山市山市",
+                "add_time": "2017-12-16 18:10:46"
+            },
+            {
+                "cityid": 199,
+                "city": "深圳市",
+                "prid": 1112,
+                "prname": "222",
+                "username": "ys10254",
+                "realname": "",
+                "sgname": "",
+                "gcdizhi": "",
+                "add_time": "2017-12-16 17:48:57"
+            },
+            {
+                "cityid": 135,
+                "city": "济南市",
+                "prid": 1106,
+                "prname": "山东安丘碧桂园项目",
+                "username": "ys10263",
+                "realname": "",
+                "sgname": "",
+                "gcdizhi": "",
+                "add_time": "2017-12-16 16:08:38"
+            },
+            {
+                "cityid": 199,
+                "city": "深圳市",
+                "prid": 1097,
+                "prname": "测试工程",
+                "username": "weijinhuan",
+                "realname": "韦欢",
+                "sgname": "",
+                "gcdizhi": "",
+                "add_time": "2017-12-15 22:03:23"
+            },
+            {
+                "cityid": 201,
+                "city": "汕头市",
+                "prid": 1096,
+                "prname": "铜盂项目",
+                "username": "ys10269",
+                "realname": "",
+                "sgname": "",
+                "gcdizhi": "",
+                "add_time": "2017-12-15 19:07:27"
+            },
+            {
+                "cityid": 58,
+                "city": "白城市",
+                "prid": 1095,
+                "prname": "白城碧桂园",
+                "username": "ys10268",
+                "realname": "",
+                "sgname": "",
+                "gcdizhi": "",
+                "add_time": "2017-12-15 18:23:06"
+            },
+            {
+                "cityid": 209,
+                "city": "汕尾市",
+                "prid": 1092,
+                "prname": "汕尾碧桂园华附凤凰城一期A标段高层区工程",
+                "username": "ys10266",
+                "realname": "",
+                "sgname": "",
+                "gcdizhi": "",
+                "add_time": "2017-12-15 17:00:29"
+            },
+            {
+                "cityid": 215,
+                "city": "潮州市",
+                "prid": 1091,
+                "prname": "潮州碧桂园第16幢-A、16幢-B、17幢-A、17幢-B、18幢、19幢-A、19幢-B、23幢",
+                "username": "ys10265",
+                "realname": "",
+                "sgname": "",
+                "gcdizhi": "",
+                "add_time": "2017-12-15 16:56:53"
+            },
+            {
+                "cityid": 197,
+                "city": "广州市",
+                "prid": 1090,
+                "prname": "测试测试测试测试测试测试测试",
+                "username": null,
+                "realname": null,
+                "sgname": "",
+                "gcdizhi": "",
+                "add_time": "2017-12-15 15:05:28"
+            },
+            {
+                "cityid": 135,
+                "city": "济南市",
+                "prid": 1084,
+                "prname": "邹城碧桂园一期55.56.57.58.59",
+                "username": "ys10263",
+                "realname": "",
+                "sgname": "",
+                "gcdizhi": "",
+                "add_time": "2017-12-12 16:20:02"
+            },
+            {
+                "cityid": 82,
+                "city": "盐城市",
+                "prid": 1083,
+                "prname": "射阳项目",
+                "username": "ys10042",
+                "realname": "",
+                "sgname": "",
+                "gcdizhi": "",
+                "add_time": "2017-12-12 16:05:34"
+            },
+            {
+                "cityid": 197,
+                "city": "广州市",
+                "prid": 1082,
+                "prname": "广州南站",
+                "username": "ys10262",
+                "realname": "",
+                "sgname": "",
+                "gcdizhi": "",
+                "add_time": "2017-12-11 17:15:58"
+            },
+            {
+                "cityid": 207,
+                "city": "惠州市",
+                "prid": 1081,
+                "prname": "新力帝泊湾花园1至8栋、10栋、11栋、20栋（办公楼）、商业（A区、B区、C1区、C2区、D区）、幼儿园、垃圾站、公厕、再生资源回收站、地下室",
+                "username": "ys10261",
+                "realname": "",
+                "sgname": "",
+                "gcdizhi": "",
+                "add_time": "2017-12-10 11:46:47"
+            },
+            {
+                "cityid": 207,
+                "city": "惠州市",
+                "prid": 1080,
+                "prname": "新力帝泊湾花园",
+                "username": "xiaoxiao1990hn@163.c",
+                "realname": "张强",
+                "sgname": "",
+                "gcdizhi": "",
+                "add_time": "2017-12-10 11:21:36"
+            },
+            {
+                "cityid": 212,
+                "city": "清远市",
+                "prid": 1079,
+                "prname": "清远银盏酒店群＿前区停车场（地下）",
+                "username": "13416589783",
+                "realname": "",
+                "sgname": "中国建筑一局(集团)有限公司",
+                "gcdizhi": "清远市清城区银盏林场",
+                "add_time": "2017-12-10 10:39:46"
+            },
+            {
+                "cityid": 1,
+                "city": "北京市",
+                "prid": 1077,
+                "prname": "test11111",
+                "username": null,
+                "realname": null,
+                "sgname": "",
+                "gcdizhi": "",
+                "add_time": "2017-12-07 17:15:01"
+            },
+            {
+                "cityid": 199,
+                "city": "深圳市",
+                "prid": 1075,
+                "prname": "长安城",
+                "username": "ys10258",
+                "realname": "",
+                "sgname": "",
+                "gcdizhi": "",
+                "add_time": "2017-12-07 10:58:29"
+            },
+            {
+                "cityid": 199,
+                "city": "深圳市",
+                "prid": 1070,
+                "prname": "天朝2",
+                "username": "ys10258",
+                "realname": "",
+                "sgname": "",
+                "gcdizhi": "",
+                "add_time": "2017-12-06 10:13:05"
+            },
+            {
+                "cityid": 207,
+                "city": "惠州市",
+                "prid": 1068,
+                "prname": "天安三期",
+                "username": "lvduancan",
+                "realname": "LV",
+                "sgname": "",
+                "gcdizhi": "",
+                "add_time": "2017-12-02 16:33:07"
+            },
+            {
+                "cityid": 73,
+                "city": "上海市",
+                "prid": 1066,
+                "prname": "Dfghhj",
+                "username": "ys10256",
+                "realname": "",
+                "sgname": "",
+                "gcdizhi": "",
+                "add_time": "2017-12-01 21:37:33"
+            }
+        ]
+    }
+}

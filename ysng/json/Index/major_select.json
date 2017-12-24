@@ -1,0 +1,31 @@
+{
+    "code": 1,
+    "msg": "查询成功",
+    "data": [
+        {
+            "mid": 1,
+            "name": "土建资料（广东）",
+            "pid": 19,
+            "create_time": "2017-12-23",
+            "update_time": "2017-12-23",
+            "isdel": 0,
+            "visible": 1,
+            "province": "广东省",
+            "listorder": 1,
+            "codeid": "tirpwH_abUezSXX22"
+        },
+        {
+            "mid": 2,
+            "name": "土建资料（广西）",
+            "pid": 20,
+            "create_time": "2017-12-23",
+            "update_time": "2017-12-23",
+            "isdel": 0,
+            "visible": 1,
+            "province": "广西壮族自治区",
+            "listorder": 2,
+            "codeid": "53q_bkSSMBbzSXX21"
+        }
+    ],
+    "arr": ""
+}

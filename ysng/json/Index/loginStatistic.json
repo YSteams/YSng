@@ -1,0 +1,558 @@
+{
+    "code": 1,
+    "msg": "查询成功",
+    "data": [
+        {
+            "uid": 5,
+            "username": "weiyuliang",
+            "realname": "韦宇亮",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 319
+        },
+        {
+            "uid": 1114,
+            "username": "ys10254",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 158
+        },
+        {
+            "uid": 15,
+            "username": "weijinhuan",
+            "realname": "韦欢",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 84
+        },
+        {
+            "uid": 1113,
+            "username": null,
+            "realname": null,
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 54
+        },
+        {
+            "uid": 1112,
+            "username": "ys10252",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 48
+        },
+        {
+            "uid": 891,
+            "username": "ys10042",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 22
+        },
+        {
+            "uid": 902,
+            "username": "ys10053",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 18
+        },
+        {
+            "uid": 1115,
+            "username": "ys10255",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 15
+        },
+        {
+            "uid": 1119,
+            "username": "ys10258",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 14
+        },
+        {
+            "uid": 832,
+            "username": "QQ695292910",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 13
+        },
+        {
+            "uid": 1124,
+            "username": "ys10263",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 13
+        },
+        {
+            "uid": 1111,
+            "username": null,
+            "realname": null,
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 12
+        },
+        {
+            "uid": 963,
+            "username": "ys10114",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 12
+        },
+        {
+            "uid": 1154,
+            "username": "ys10290",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 10
+        },
+        {
+            "uid": 1092,
+            "username": "ys10242",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 10
+        },
+        {
+            "uid": 1096,
+            "username": null,
+            "realname": null,
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 8
+        },
+        {
+            "uid": 1127,
+            "username": "ys10266",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 8
+        },
+        {
+            "uid": 68,
+            "username": "peters",
+            "realname": "bortom",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 8
+        },
+        {
+            "uid": 1097,
+            "username": "ys10247",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 7
+        },
+        {
+            "uid": 1130,
+            "username": "ys10269",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 5
+        },
+        {
+            "uid": 1136,
+            "username": null,
+            "realname": null,
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 5
+        },
+        {
+            "uid": 1122,
+            "username": "ys10261",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 5
+        },
+        {
+            "uid": 1146,
+            "username": "ys10282",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 5
+        },
+        {
+            "uid": 697,
+            "username": "13416589783",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 5
+        },
+        {
+            "uid": 1150,
+            "username": "ys10286",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 5
+        },
+        {
+            "uid": 1000,
+            "username": "ys10151",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 4
+        },
+        {
+            "uid": 974,
+            "username": "ys10125",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 4
+        },
+        {
+            "uid": 549,
+            "username": null,
+            "realname": null,
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 4
+        },
+        {
+            "uid": 1138,
+            "username": "ys10274",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 4
+        },
+        {
+            "uid": 1123,
+            "username": "ys10262",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 3
+        },
+        {
+            "uid": 45,
+            "username": "lvduancan",
+            "realname": "LV",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 3
+        },
+        {
+            "uid": 1144,
+            "username": "ys10280",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 3
+        },
+        {
+            "uid": 1110,
+            "username": null,
+            "realname": null,
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 3
+        },
+        {
+            "uid": 1135,
+            "username": null,
+            "realname": null,
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 3
+        },
+        {
+            "uid": 1153,
+            "username": "ys10289",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 2
+        },
+        {
+            "uid": 860,
+            "username": "ys10011",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 2
+        },
+        {
+            "uid": 1139,
+            "username": "ys10275",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 2
+        },
+        {
+            "uid": 1085,
+            "username": null,
+            "realname": null,
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 2
+        },
+        {
+            "uid": 1125,
+            "username": "ys10264",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 2
+        },
+        {
+            "uid": 1109,
+            "username": null,
+            "realname": null,
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 2
+        },
+        {
+            "uid": 1132,
+            "username": "ys10271",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 2
+        },
+        {
+            "uid": 404,
+            "username": "15999965806",
+            "realname": "黄刘凯",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 1
+        },
+        {
+            "uid": 1148,
+            "username": "ys10284",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 1
+        },
+        {
+            "uid": 1094,
+            "username": "ys10244",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 1
+        },
+        {
+            "uid": 841,
+            "username": "wantuming",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 1
+        },
+        {
+            "uid": 1012,
+            "username": "ys10163",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 1
+        },
+        {
+            "uid": 1143,
+            "username": "ys10279",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 1
+        },
+        {
+            "uid": 937,
+            "username": "ys10088",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 1
+        },
+        {
+            "uid": 1080,
+            "username": "ys10230",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 1
+        },
+        {
+            "uid": 1151,
+            "username": "ys10287",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 1
+        },
+        {
+            "uid": 1106,
+            "username": null,
+            "realname": null,
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 1
+        },
+        {
+            "uid": 1128,
+            "username": "ys10267",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 1
+        },
+        {
+            "uid": 1133,
+            "username": "ys10272",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 1
+        },
+        {
+            "uid": 1140,
+            "username": "ys10276",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 1
+        },
+        {
+            "uid": 1149,
+            "username": "ys10285",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 1
+        },
+        {
+            "uid": 859,
+            "username": null,
+            "realname": null,
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 1
+        },
+        {
+            "uid": 1126,
+            "username": "ys10265",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 1
+        },
+        {
+            "uid": 1131,
+            "username": "ys10270",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 1
+        },
+        {
+            "uid": 1118,
+            "username": null,
+            "realname": null,
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 1
+        },
+        {
+            "uid": 1121,
+            "username": "ys10260",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 1
+        },
+        {
+            "uid": 1147,
+            "username": "ys10283",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 1
+        },
+        {
+            "uid": 1152,
+            "username": "ys10288",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 1
+        },
+        {
+            "uid": 1129,
+            "username": "ys10268",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 1
+        },
+        {
+            "uid": 1116,
+            "username": "ys10256",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 1
+        },
+        {
+            "uid": 1142,
+            "username": "ys10278",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 1
+        },
+        {
+            "uid": 1120,
+            "username": "ys10259",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 1
+        },
+        {
+            "uid": 842,
+            "username": "guyuan",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 1
+        },
+        {
+            "uid": 114,
+            "username": "xiaoxiao1990hn@163.c",
+            "realname": "张强",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 1
+        },
+        {
+            "uid": 1145,
+            "username": "ys10281",
+            "realname": "",
+            "btime": "2017-12-01",
+            "etime": "2017-12-23",
+            "logintimes": 1
+        }
+    ]
+}
