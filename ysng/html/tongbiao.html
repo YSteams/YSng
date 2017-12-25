@@ -1,3 +1,289 @@
-<div>
-  123
-</div>
+    <div class="am-tabs am-margin" data-am-tabs>
+      <ul class="am-tabs-nav am-nav am-nav-tabs">
+        <li class="am-active"><a href="#tab1">专业管理</a></li> 
+      </ul> 
+      <div class="am-tabs-bd">
+        <div class="am-tab-panel am-fade am-in am-active" id="tab1"> 
+  
+<!-- 专业列表 -->
+<div ng-show="ystab==0" a='{{ystab}}'>
+	  <div class="am-g">
+        <div class="am-u-sm-12 am-u-md-6"> 
+        <button type="button" changetab='1' class="am-btn am-btn-default"><span class="am-icon-plus"></span> 新增专业</button>
+        </div>
+        <div class="am-u-sm-12 am-u-md-3"> 
+        </div>
+        <div class="am-u-sm-12 am-u-md-3">
+          <div class="am-input-group am-input-group-sm">
+            <input ng-model='YS_lista.params.keyword' ysenter="YS_lista" type="text" class="am-form-field">
+          <span class="am-input-group-btn">
+            <button class="am-btn am-btn-default" ng-click="fetch('YS_lista')" type="button">搜索</button>
+          </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="am-g">
+        <div class="am-u-sm-12">
+          <form class="am-form"> 
+                     <!-- 专业列表  --> 
+                    <table  class="am-table am-table-striped am-table-hover table-main" >
+                        <thead>
+                        <tr>
+                            <td style="width:100px;">排序</td> 
+                            <td >资料专业名称</td> 
+                       
+                            <td style="width:150px;">省份</td>  
+                            <td style="width: 15%">操作</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-if="value.isdel!=1"  ng-repeat="(key, value) in YS_lista.data">  
+                             <td ng-bind="key+1"> 
+                             </td> 
+                            <td ng-bind="value.name" tap="2" tapshowrunzl="com_list" :codeid="{{value.codeid}}"  :mid="{{value.mid}}" style="cursor: pointer;color: #52b2fc;"> 
+                 
+                            </td> 
+                             <td  style="text-align: center;" ng-bind="value.province"> </td>
+                            
+                            <td>
+
+             <div class="comment_option">
+             <a  class="hand" findtable>查看模版</a> 
+             <a class="ml_10 hand" tap="0" ysdelone="id">删除</a></div> 
+                            </td>
+                        </tr> 
+                        </tbody> 
+                    </table>
+          <!-- 专业列表 -->  
+             <div style="text-align: center;" id="YS_plista">
+             	
+             </div>
+          </form>
+        </div> 
+      </div>
+</div> 
+<!-- 专业列表 -->
+
+
+
+
+ 
+
+
+             <!-- 新增专业 -->
+        <div ng-show="ystab==1" style="margin-top: 30px;">
+        <form class="am-form">
+            <div class="am-g am-margin-top-sm">
+              <div class="am-u-sm-4 am-u-md-2 am-text-right">
+                *专业名称：
+              </div>
+              <div class="am-u-sm-8 am-u-md-4 am-u-end">
+                <input type="text" ng-model="YS_obja.params.name" class="am-input-sm">
+              </div>
+            </div> 
+
+             <div class="am-g am-margin-top-sm">
+              <div class="am-u-sm-4 am-u-md-2 am-text-right">
+                *选择省份：
+              </div>
+              <div class="am-u-sm-8 am-u-md-4 am-u-end">
+               	 <select yssel="YS_obja.params.pid" >
+	                <option ng-repeat="(key, value) in com_lista.data" value="option1">{{value.province}}</option> 
+	              </select>
+              </div>
+            </div>
+
+      <div class="am-g am-margin-top">
+            <div class="am-u-sm-4 am-u-md-2 am-text-right">显示状态：</div>
+            <div class="am-u-sm-8 am-u-md-10">
+              <div class="am-btn-group" data-am-button>
+                <label  class="am-btn am-btn-default am-btn-xs" setvalue="YS_obja.params.visible" value="1">
+                  <input type="radio" name="option1" id="option1"> 显示
+                </label>
+                <label   class="am-btn am-btn-default am-btn-xs" value='0' setvalue="YS_obja.params.visible">
+                  <input type="radio" name="option2"  id="option2"> 隐藏
+                </label> 
+              </div>
+            </div>
+          </div>
+          </form>         
+            
+ 
+
+   
+
+          <div class="am-margin">
+      <button type="button" class="am-btn am-btn-primary am-btn-xs" ysfetch="YS_obja">提交</button>
+      <button type="button" class="am-btn am-btn-primary am-btn-xs" changetab="0">返回</button>
+    </div>
+        </div>
+        <!--  新增专业 -->
+
+
+   <!-- 菜单列表  -->
+         <div ng-show="ystab==2"  > 
+	  <div class="am-g">
+        <div class="am-u-sm-12 am-u-md-6"> 
+        <button type="button" changetab='3' class="am-btn am-btn-default"><span class="am-icon-plus"></span> 新增菜单</button>
+         <button type="button" changetab='0' class="am-btn am-btn-default"><span class="am-icon-plus"></span> 返回</button>
+        </div>
+        <div class="am-u-sm-12 am-u-md-3"> 
+        </div>
+        <div class="am-u-sm-12 am-u-md-3">
+           
+        </div>
+      </div>
+
+<div class="am-g">
+        <div class="am-u-sm-12">
+          <form class="am-form"> 
+                    <table  class="am-table am-table-striped am-table-hover table-main" >
+                        <thead>
+                        <tr>
+                            <td style="width:100px;">排序</td>
+                            <td style="width:60px;text-align: left;">ID</td>
+                            <td style="text-align: left;">名称</td>  
+                            <td style="width:150px;">编码</td> 
+                            <td style="width:150px;">图标</td> 
+                            <td width="115">显示隐藏</td>
+                            <td style="width: 15%">操作</td>
+                        </tr> 
+                        </thead>
+                        <tbody>
+                       <tr  ng-if="value.isdel!=1" ng-repeat="(key, value) in YS_listb.data"> 
+                            <td class="t_c"><input ysupdateone="com_editadd5.params.listorder" num="1" style="width:50px;text-align:center;height: 26px;margin: 0 4px;" type="text" name="" value="{{value.listorder}}" placeholder=""> </td>
+                            <td style="text-align: left;" ng-bind="value.id"> </td>  
+                            <td  style="text-align: left;" ><span ng-bind-html="value.cstlip|htmlfil"></span><span ng-bind-html="value.name|htmlfil"></span></td>
+ 
+                             <td  style="text-align: left;" > 
+                             <input ysupdateone="com_editadd5.params.code" num="1" style="width:150px;text-align:center;height: 26px;margin: 0 4px;" type="text" name="" value="{{value.code}}" placeholder="">  </td>
+                             <td  style="text-align: left;" > <input ysupdateone="com_editadd5.params.icon" num="1" style="width:100px;text-align:center;height: 26px;margin: 0 4px;margin-left: 28px" type="text" name="" value="{{value.icon}}" placeholder=""> </td>  
+                             <td> 
+                             <div class="checkbox checkbox-info checkbox-circle">
+                               <input ng-checked="{{value.visible==1}}" id="checkbox{{key}}" type="checkbox" ysupdateshow="com_editadd5.params.visible"  >                                                     
+                               <label for="checkbox{{key}}" ng-bind="value.visible==1?'显示':'隐藏'"></label>
+                             </div> 
+                             </td> 
+                             <td> 
+                               <div class="comment_option">
+                                 <a  changetab="3" class=" hand">新增子菜单</a>
+                                 <a  yseditadd="com_editadd4" tapshow="3" ng-if="value.type=='dir'" class="ml_10 hand">编辑</a>
+                                 <a class="ml_10 hand" comdelones="com_del2">删除</a>
+                               </div>
+
+                             </td>
+                        </tr> 
+                        </tbody> 
+                    </table>
+             <div style="text-align: center;" id="YS_plista">
+             	
+             </div>
+          </form>
+        </div> 
+      </div>
+ 
+
+
+
+
+ 
+            </div>
+          <!-- 菜单列表 -->      
+            
+
+
+
+
+	 <!-- 新增列表  -->
+             <div ng-show="ystab==3" style="margin-top: 30px;">
+        <form class="am-form">
+            <div class="am-g am-margin-top-sm">
+              <div class="am-u-sm-4 am-u-md-2 am-text-right">
+                *菜单名称：
+              </div>
+              <div class="am-u-sm-8 am-u-md-4 am-u-end">
+                <input type="text" class="am-input-sm">
+              </div>
+            </div> 
+
+             <div class="am-g am-margin-top-sm">
+              <div class="am-u-sm-4 am-u-md-2 am-text-right">
+                *上级菜单：
+              </div>
+              <div class="am-u-sm-8 am-u-md-4 am-u-end">
+               	 <select data-am-selected="{btnSize: 'sm'}">
+	                <option value="option1">选项一...</option>
+	                <option value="option2">选项二.....</option>
+	                <option value="option3">选项三........</option>
+	              </select>
+              </div>
+            </div>
+
+     <div class="am-g am-margin-top">
+            <div class="am-u-sm-4 am-u-md-2 am-text-right">类型：</div>
+            <div class="am-u-sm-8 am-u-md-10">
+              <div class="am-btn-group" data-am-button>
+                <label class="am-btn am-btn-default am-btn-xs">
+                  <input type="radio" name="options" id="option1"> 文件夹
+                </label>
+                <label class="am-btn am-btn-default am-btn-xs">
+                  <input type="radio" name="options" id="option2"> 表格
+                </label> 
+              </div>
+            </div>
+          </div>
+
+      <div class="am-g am-margin-top">
+            <div class="am-u-sm-4 am-u-md-2 am-text-right">显示状态：</div>
+            <div class="am-u-sm-8 am-u-md-10">
+              <div class="am-btn-group" data-am-button>
+                <label class="am-btn am-btn-default am-btn-xs">
+                  <input type="radio" name="options" id="option1"> 显示
+                </label>
+                <label class="am-btn am-btn-default am-btn-xs">
+                  <input type="radio" name="options" id="option2"> 隐藏
+                </label> 
+              </div>
+            </div>
+          </div>
+          </form> 
+          <div class="am-margin">
+      <button type="button" class="am-btn am-btn-primary am-btn-xs">提交</button>
+      <button type="button" class="am-btn am-btn-primary am-btn-xs"  changetab="2">返回</button>
+    </div>
+        </div> 
+          <!-- 新增菜单 -->  
+
+
+
+
+				 
+        </div>
+
+      
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>

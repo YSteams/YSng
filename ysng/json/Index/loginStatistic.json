@@ -1,15 +1,7 @@
 {
     "code": 1,
     "msg": "查询成功",
-    "data": [
-        {
-            "uid": 5,
-            "username": "weiyuliang",
-            "realname": "韦宇亮",
-            "btime": "2017-12-01",
-            "etime": "2017-12-23",
-            "logintimes": 319
-        },
+    "data": [ 
         {
             "uid": 1114,
             "username": "ys10254",
@@ -17,15 +9,7 @@
             "btime": "2017-12-01",
             "etime": "2017-12-23",
             "logintimes": 158
-        },
-        {
-            "uid": 15,
-            "username": "weijinhuan",
-            "realname": "韦欢",
-            "btime": "2017-12-01",
-            "etime": "2017-12-23",
-            "logintimes": 84
-        },
+        }, 
         {
             "uid": 1113,
             "username": null,

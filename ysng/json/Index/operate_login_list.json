@@ -5,14 +5,7 @@
         "total": 17761,
         "pages": 592.03333333333,
         "datalist": [
-            {
-                "username": "weijinhuan",
-                "realname": "韦欢",
-                "logintime": "2017-12-23 05:12:04",
-                "loginip": "163.125.118.7",
-                "logtype": "1",
-                "codeid": "43ntw3XaDL3SVX22K6w_aFA"
-            },
+            
             {
                 "username": "ys10292",
                 "realname": "",
@@ -30,36 +23,12 @@
                 "codeid": "sX6_bkyCPA77SVX22K6w_aFg"
             },
             {
-                "username": "weijinhuan",
-                "realname": "韦欢",
-                "logintime": "2017-12-23 04:12:32",
-                "loginip": "183.13.216.249",
-                "logtype": "4",
-                "codeid": "5C2_blyCIBb_aSVX22K602Hw"
-            },
-            {
                 "username": "ys10264",
                 "realname": "",
                 "logintime": "2017-12-23 04:12:43",
                 "loginip": "117.136.79.100",
                 "logtype": "4",
                 "codeid": "snO5lnGJBb7SVX22K602Hg"
-            },
-            {
-                "username": "weijinhuan",
-                "realname": "韦欢",
-                "logintime": "2017-12-23 04:12:42",
-                "loginip": "183.13.216.249",
-                "logtype": "4",
-                "codeid": "t36_blHHZUOnSVX22K602EQ"
-            },
-            {
-                "username": "weiyuliang",
-                "realname": "韦宇亮",
-                "logintime": "2017-12-23 04:12:07",
-                "loginip": "183.13.216.249",
-                "logtype": "4",
-                "codeid": "5XPtn3LfAOnSVX22K602EA"
             },
             {
                 "username": "weijinhuan",
@@ -78,14 +47,6 @@
                 "codeid": "5Cm_awnKPArnSVX22K602Eg"
             },
             {
-                "username": "weiyuliang",
-                "realname": "韦宇亮",
-                "logintime": "2017-12-23 12:12:03",
-                "loginip": "183.13.216.249",
-                "logtype": "1",
-                "codeid": "5n29wifaB_bzSVX22K602FQ"
-            },
-            {
                 "username": "ys10252",
                 "realname": "",
                 "logintime": "2017-12-23 12:12:57",
@@ -100,14 +61,6 @@
                 "loginip": "14.154.176.87",
                 "logtype": "2",
                 "codeid": "433qlyKIU_bvSVX22K602Fw"
-            },
-            {
-                "username": "weiyuliang",
-                "realname": "韦宇亮",
-                "logintime": "2017-12-23 10:12:00",
-                "loginip": "183.13.216.249",
-                "logtype": "1",
-                "codeid": "6iq6n36MBr_aSVX22K602Fg"
             },
             {
                 "username": "ys10291",
@@ -188,14 +141,6 @@
                 "loginip": "14.122.136.196",
                 "logtype": "4",
                 "codeid": "4n_b0wHTbV_bvSVX22K603Fg"
-            },
-            {
-                "username": "weiyuliang",
-                "realname": "韦宇亮",
-                "logintime": "2017-12-22 09:12:04",
-                "loginip": "183.13.216.249",
-                "logtype": "4",
-                "codeid": "53K_bxX6IDe_aSVX22K604Hw"
             },
             {
                 "username": "ys10290",

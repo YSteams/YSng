@@ -122,6 +122,11 @@ delCookie:function(name){
         //删除cookies 
         f.setCookie(name, "", -1);  
     },
+    getscope_byid: function(sc, id) {
+    /*递归，找到$id为 num 的scope.并返回；*/
+    var sp = sc.$id == id?sc:this.getscope_byid(sc.$parent, id);
+    return sp; 
+  },
 
 };
 window.YSfac = YSfac;

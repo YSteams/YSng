@@ -63,7 +63,8 @@ var main = {
      sco.com_listb.url = 'Open/city'; 
      sco.com_listb.params = {pid:17};  
 
-
+     //定义变量
+     sco.ystab = 0;
 
 
 
@@ -91,14 +92,20 @@ var main = {
      sco.YS_lista.url = 'Index/major_select';
      sco.fetch('YS_lista');
 
+     //新增专业
+     sco.YS_obja.url = 'Index/major_add'; 
+
     //资料列表     
      sco.YS_listb.url = 'Index/archive_select';
      sco.fetch('YS_listb');
+
+     //新增资料
+     sco.YS_objb.url = 'Index/archive_add'; 
   },
   weather:function(sco) {
           //天气列表
-     sco.YS_lista.url = 'Index/service_weather_list';
-     sco.fetch('YS_lista');
+     sco.YS_plista.url = 'Index/service_weather_list';
+     // sco.fetch('YS_plista');
   },
   userlist:function(sco) {
      //用户列表
@@ -117,8 +124,8 @@ var main = {
   },
   programcount:function(sco) {
           //项目列表
-     sco.YS_lista.url = 'Index/operate_pro_list';
-     sco.fetch('YS_lista');
+     sco.YS_plista.url = 'Index/operate_pro_list';
+     sco.fetch('YS_plista');
   } 
 
 
@@ -126,6 +133,10 @@ var main = {
 }; 
 //初始化控制器 ============================================================================
 var app = angular.module("app", []);
+//过滤html 
+ app.filter("htmlfil",["$sce",function($sce){ 
+        return function(text){ return $sce.trustAsHtml(text);};
+    }]);  
 app.controller('ctrl', ['$scope','$http',function($scope,$http){ 
 //初始化
 $scope.conf = conf;
@@ -184,6 +195,17 @@ main.ctrl_init($scope);
 console.log($scope);
 }]);
 //公共指令 ============================================================================
+//点击去请求某个接口
+app.directive('ysfetch', function(){ 
+return { 
+link: function(sco, iElm, iAttrs) {
+        iElm.on("click",function(e){ 
+           var ctrlsco = YSfac.getscope_byid(sco,2);
+           ctrlsco.fetch(iAttrs.ysfetch); 
+        });
+     }
+};
+}); 
 //回车，就去请求某个接口
 app.directive('ysenter', function(){ 
 return { 
@@ -210,21 +232,42 @@ link: function(sco, iElm, iAttrs) {
 };
 }); 
 
-//公共增加   ysadd='YS_plista.data.datalist'  
-app.directive('ysadd', function(){ 
+
+//点击，赋值
+app.directive('setvalue', function(){ 
 return { 
 link: function(sco, iElm, iAttrs) {
-        iElm.on("click",function(e){
-           var arr = iAttrs.ysadd.split('.'); 
+        iElm.on("click",function(e){ 
+          debugger;
+           var arr = iAttrs.setvalue.split('.'); 
+           var obj = sco;
+           var key = '';
+           arr.map(function(el,ind){ 
+            ind<arr.length-1&&(obj = obj[el]);
+            ind==arr.length-1&&(key=el);
+          });
+           obj[key] = iAttrs.value; 
+           sco.$apply(); 
+        });
+     }
+};
+}); 
+
+
+//公共增加，触发会调用接口   ysadd='YS_plista.data.datalist'  
+app.directive('ysaddrun', function(){ 
+return { 
+link: function(sco, iElm, iAttrs) {
+        iElm.on("click",function(e){ 
+           var arr = iAttrs.ysaddrun.split('.'); 
            var list = sco; 
            arr.map(function(el){list = list[el];}); 
               sco.com_add.done = function(re,sco) {
                 if(re.code==1){ 
-                  list.push(re.data);
-                  sco.$apply();
-                  layer.msg('成功');
-                }else{
-                  layer.msg('失败');
+                  list.unshift(re.data); 
+                  YS('layer',function() {layer.msg('成功');});
+                }else{ 
+                  YS('layer',function() {layer.msg('失败');});
                 }
               }
               sco.fetch('com_add'); 
@@ -233,6 +276,22 @@ link: function(sco, iElm, iAttrs) {
 };
 }); 
 
+//公共编辑  ysedit='YS_obja.params'  
+app.directive('ysaddedit', function(){ 
+return { 
+link: function(sco, iElm, iAttrs) {
+        iElm.on("click",function(e){
+           var arr = iAttrs.ysadd.split('.'); 
+           var list = sco; 
+           arr.map(function(el){list = list[el];});
+
+               
+        });
+     }
+};
+}); 
+
+ 
 //select 选中赋值并执行
 app.directive('ysselrun', function(){ 
 return { 
@@ -257,7 +316,7 @@ app.directive('yssel', function(){
 return { 
 link: function(sco, iElm, iAttrs) {
         iElm.on("change",function(e){ 
-           var arr = iAttrs.ysselrun.split('.'); 
+           var arr = iAttrs.yssel.split('.'); 
            var obj = sco;
            var key = '';
            arr.map(function(el,ind){ 
@@ -265,6 +324,19 @@ link: function(sco, iElm, iAttrs) {
             ind==arr.length-1&&(key=el);
           });
            obj[key] = iElm.val(); 
+        });
+     }
+};
+}); 
+
+//公共切换tab的值
+app.directive('changetab', function(){ 
+return { 
+link: function(sco, iElm, iAttrs) {
+        iElm.on("click",function(e){ 
+          var ctrlsco = YSfac.getscope_byid(sco,2);
+            ctrlsco.ystab = iAttrs.changetab;
+            ctrlsco.$apply();
         });
      }
 };
@@ -332,10 +404,20 @@ link: function(sco, iElm, iAttrs) {
 });
 
 
-//自定义指令 ============================================================================
-
- 
-
+//自定义私有指令 ============================================================================
+app.directive('findtable', function(){ 
+return { 
+link: function(sco, iElm, iAttrs) {
+        iElm.on("click",function(e){ 
+          var ctrlsco = YSfac.getscope_byid(sco,2);
+          ctrlsco.YS_listb.params.pid = sco.value.pid;
+          ctrlsco.fetch('YS_listb');
+          ctrlsco.ystab = 2;
+          ctrlsco.$apply(); 
+        });
+     }
+};
+});
 
 //绑定dom ============================================================================
  angular.element(document).ready(function() {angular.bootstrap(document, ['app']);}); 

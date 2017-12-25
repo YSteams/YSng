@@ -1,3 +1,100 @@
-<div>
-  123
-</div>
+    <div class="am-tabs am-margin" data-am-tabs>
+      <ul class="am-tabs-nav am-nav am-nav-tabs">
+        <li class="am-active"><a href="#tab1">温度列表</a></li> 
+      </ul> 
+      <div class="am-tabs-bd">
+        <div class="am-tab-panel am-fade am-in am-active" id="tab1"> 
+				 <div class="am-g">
+        <div class="am-u-sm-12 am-u-md-6">
+         <div class="am-form-group">
+            <select ysselrun="com_listb.params.pid"  data-am-selected="{btnSize: 'sm'}">
+              <option  value="">选择省份</option> 
+              <option ng-repeat="(key, value) in com_lista.data" value="{{value.pid}}">{{value.province}}</option> 
+            </select>
+
+            <select ysselrun="YS_plista.params.ctid"  data-am-selected="{btnSize: 'sm'}">
+              <option  value="">选择城市</option> 
+              <option ng-repeat="(key, value) in com_listb.data" value="{{value.ctid}}">{{value.city}}</option> 
+            </select>
+          </div>
+        </div>
+        <div class="am-u-sm-12 am-u-md-3">
+           
+        </div>
+        <div class="am-u-sm-12 am-u-md-3">
+          <div class="am-input-group am-input-group-sm">
+            <input ng-model='YS_plista.params.keyword' ysenter="YS_plista" type="text" class="am-form-field">
+          <span class="am-input-group-btn">
+            <button class="am-btn am-btn-default" ng-click="fetch('YS_plista')" type="button">搜索</button>
+          </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="am-g">
+        <div class="am-u-sm-12">
+          <form class="am-form">
+            <table class="am-table am-table-striped am-table-hover table-main mytable">
+                    <thead class="bordered-palegreen">
+                        <tr align="center">   
+                                        <td width="3%" scope="col" style="padding: 6px;">
+                    <label>
+                        <input type="checkbox" yschkall="YS_plista.data.datalist" class="colored-blue">
+                        <span class="text"></span>
+                    </label>
+                </td>                       
+			<td height="24" width="3%">序号</td>
+              <td width="8%">城市</td>
+              <td width="8%">日期</td>
+              <td width="8%">最高气温</td>
+              <td width="8%">最低气温</td>
+              <td width="8%">平均</td>	
+              <td width="8%">更新日期</td>		         
+                        </tr>
+
+                    </thead>
+               <tbody>
+              <tr align="center" ng-if="value.isdel!=1" ng-repeat="(key, value) in YS_plista.data.datalist"> 
+              <td  align="center">
+                  <div class="checkbox">
+                      <label>
+                          <input type="checkbox" class="colored-blue" comcheck="check" ng-checked="value.ischk==1">
+                          <span class="text"></span>
+                      </label>
+                  </div>
+
+              </td>              
+              <td height="29" width="3%">{{key+1}}</td>
+              <td width="8%">{{value.city}}</td>
+              <td width="8%">
+                <input type="text" class="form-control" laydateedit="wdate" value="{{value.wdate}}" placeholder="日期" style="border: none;"/>             
+              </td>
+              <td width="8%" >
+                <input value="{{value.htem}}"  comedit='htem' class="form-control b_0" style="border: none;" type="text">
+              </td>
+              <td width="8%" >
+                <input value="{{value.ltem}}"  comedit='ltem' class="form-control b_0" style="border: none;" type="text">
+              </td>
+              <td width="8%" >
+                <input value="{{value.vtem}}"  comedit='vtem' class="form-control b_0" style="border: none;" type="text">
+              </td>  
+              <td width="8%" >
+               <span ng-bind="value.lastupdate"></span>
+              </td>                          
+         	 </tr>
+			</tbody>
+ </table>
+             <div style="text-align: center;" id="YS_plista">
+             	
+             </div>
+          </form>
+        </div>
+
+      </div>
+        </div>
+
+      
+ 
+
+      </div>
+    </div>

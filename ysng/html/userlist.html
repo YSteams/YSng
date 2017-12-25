@@ -32,7 +32,7 @@
         </div>
         <div class="am-u-sm-12 am-u-md-3">
           <div class="am-input-group am-input-group-sm">
-            <input ng-model='YS_plista.params.keyword' enterrun="YS_plista" type="text" class="am-form-field">
+            <input ng-model='YS_plista.params.keyword' ysenter="YS_plista" type="text" class="am-form-field">
           <span class="am-input-group-btn">
             <button class="am-btn am-btn-default" ng-click="fetch('YS_plista')" type="button">搜索</button>
           </span>
@@ -50,7 +50,6 @@
                     <th>ID</th>
                     <th>用户名</th>                           
                     <th>真实姓名</th> 
-                    <th>联系电话</th>
                     <th>用户类型</th> 
                     <th>是否锁定</th> 
                     <th>绑定QQ</th>
@@ -66,8 +65,7 @@
                             <td ng-bind="$index+1"></td>
                             <td ng-bind="value.uid"></td>
                             <td ng-bind="value.username"></td>                           
-                            <td ng-bind="value.realname"></td>  
-                            <td ng-bind="value.tel"></td>
+                            <td ng-bind="value.realname"></td> 
                             <td ><span ng-if="value.usertype==1">系统管理员</span>
                             <span ng-if="value.usertype==2">普通管理员</span>
                             <span ng-if="value.usertype==3">普通用户</span>

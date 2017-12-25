@@ -15,12 +15,9 @@
           <div class="am-form-group">
             <select data-am-selected="{btnSize: 'sm'}" ysselrun="YS_plista.params.pid">
               <option value="option1">所有类别</option>
-              <option value="option2">IT业界</option>
-              <option value="option3">数码产品</option>
-              <option value="option3">笔记本电脑</option>
-              <option value="option3">平板电脑</option>
-              <option value="option3">只能手机</option>
-              <option value="option3">超极本</option>
+              <option value="option2">钢筋</option>
+              <option value="option3">水泥</option>
+              <option value="option3">沙</option> 
             </select>
           </div>
         </div>
@@ -37,7 +34,7 @@
       <div class="am-g">
         <div class="am-u-sm-12">
           <form class="am-form">
-            <table class="am-table am-table-striped am-table-hover table-main">
+            <table class="am-table am-table-striped am-table-hover table-main mytable">
               <thead>
               <tr>
                    <th width="50" scope="col" style="padding: 6px;">
@@ -54,7 +51,7 @@
                    <th>型号</th>
                    <th>规格</th>
                    <th>数量</th>
-                   <th>强度</th>
+                   <th width="50">操作</th>
               </tr>
               </thead>
               <tbody>
@@ -63,7 +60,7 @@
         <td  align="center">
           <div class="checkbox">
             <label>
-              <input type="checkbox" class="colored-blue" v="{{value.ischk}}" ng-click="value.ischk=!value.ischk" ng-checked="value.ischk">
+              <input type="checkbox" class="colored-blue" ng-click="value.ischk=!value.ischk" ng-checked="value.ischk">
               <span class="text"></span>
             </label>
           </div>
@@ -96,7 +93,7 @@
         </td> 
         <td>
           <!-- <input type="text" comedit="qiangdu" value="{{value.qiangdu}}" class="form-control"> -->
-          <button type="" ysdelone='id'>删除</button>
+          <a href="javascript:;" ysdelone='id'>删除</a>
         </td>                                      
       </tr>
               </tbody>

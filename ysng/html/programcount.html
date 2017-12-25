@@ -1,3 +1,78 @@
-<div>
-  123
-</div>
+    <div class="am-tabs am-margin" data-am-tabs>
+      <ul class="am-tabs-nav am-nav am-nav-tabs">
+        <li class="am-active"><a href="#tab1">项目列表</a></li> 
+      </ul> 
+      <div class="am-tabs-bd">
+        <div class="am-tab-panel am-fade am-in am-active" id="tab1"> 
+				 <div class="am-g">
+        <div class="am-u-sm-12 am-u-md-6">
+         <div class="am-form-group">
+           
+          </div>
+        </div>
+        <div class="am-u-sm-12 am-u-md-3">
+           
+        </div>
+        <div class="am-u-sm-12 am-u-md-3">
+          <div class="am-input-group am-input-group-sm">
+            <input ng-model='YS_plista.params.keyword' ysenter="YS_plista" type="text" class="am-form-field">
+          <span class="am-input-group-btn">
+            <button class="am-btn am-btn-default" ng-click="fetch('YS_plista')" type="button">搜索</button>
+          </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="am-g">
+        <div class="am-u-sm-12">
+          <form class="am-form">
+             <table class="am-table am-table-striped am-table-hover table-main mytable">
+                    <thead class="bordered-palegreen">
+                        <tr> 
+                            <th width="50">序号</th>
+                            <th width="50">城市</th>                           
+                            <th width="400">项目名称</th> 
+                            <th width="60">姓名</th>  
+                            <th width="200">施工单位</th> 
+                            <th width="300">项目地址</th>  
+                            <th>创建时间</th>
+                        </tr>						
+                    </thead>
+                    <tbody>
+                        <tr align="center"  ng-repeat="(key, value) in YS_plista.data.datalist">
+ 
+                            <td ng-bind="$index+1"></td>
+                            <td ng-bind="value.city"></td>                           
+                            <td ng-bind="value.prname">  </td> 
+                            
+                           
+                            <td ng-bind="value.realname"></td>
+
+                            <td ng-bind="value.sgname"></td>
+                            <td ng-bind="value.gcdizhi"></td>  
+
+                            <td >
+                            <span  ng-bind="value.add_time"></span>
+                                
+                            </td>
+                            	
+                           
+                           
+                           
+                        </tr>
+                    </tbody>
+                </table>
+             <div style="text-align: center;" id="YS_plista">
+             	
+             </div>
+          </form>
+        </div>
+
+      </div>
+        </div>
+
+      
+ 
+
+      </div>
+    </div>
