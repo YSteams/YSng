@@ -1,29 +1,4 @@
 /*! YS v1.0.0 | by YSTeam | Copyright (c) 2013-2017 http://www.ysframe.com All rights reserved. | Licensed under MIT | 2017-12-22T12:00:00+0800 */ 
- 
-// YS前端架构，她是一种开发模式。简单、易用、高效。
-// 我们的口号：配置化开发，让前端开发简单，再简单一点
-/******************************************
-YS架构由以下五个部分组成
-一、配置项conf，包括主域名，开发生产设置、公共路径，私有路径等
-二、业务逻辑处理模块main,主要处理每个页面的业务
-三、初始化控制器，单页面应用的控制器，我们只有1个控制器；
-四、公共指令，YS架构的公共指令
-五、私有指令，开发者自己的自定义指令
-六、angular绑定dom；
-结束
-
-
-约定：
-1、$scope.com_lista = {
-                        params:{},  //传给后端的参数放这里
-                        data:[],  //后端返回数据放这里
-                        before:function(sco){},  //传之前进行处理，return false；可以终止提交.sco是ctrl控制器的$scope;
-                        done:function(re,sco){} //后端返回re；sco是ctrl控制器的$scope;
-                      };
-2、conf里面的 list代表的是返回的数据是个列表，obj代表的是返回的是对象
-
-******************************************/
-
 (function(window, undefined) {
 //配置项 ============================================================================ 
 var conf = {
@@ -33,165 +8,129 @@ var conf = {
   jsonpath:'./json/',//约定json路径
   debug:true,//开发模式，会所有的请求为get方法，并请求本地json;
   console:true,//ture开启，则打印一些YS提示错误信息，false关闭,不打印YS的提示信息; 
-
-  com_del:{url:'auth/comdel',method:'POST','name':'POST方法-无分页列表'},
-  com_add:{url:'auth/comadd',method:'POST','name':'POST方法-无分页列表'},
-  com_lista:{url:'auth/comlist',method:'GET','name':'POST方法-无分页列表'},
-  com_plista:{url:'auth/comlist',method:'GET','name':'GET方法-有分页列表',load:true,page:true}, 
-  com_obja:{url:'auth/comadd',method:'GET','name':'GET方法-返回对象，如详情，添加，删除'}, 
-  YS_lista:{url:'auth/comlist',method:'GET','name':'GET方法-无分页列表'}, 
-  YS_plista:{url:'auth/comlist',method:'GET','name':'GET方法-有分页列表',load:true,page:true},
-  YS_obja:{url:'auth/comadd',method:'POST','name':'POST方法-返回对象，如详情，添加，删除'}, 
+  subfix:['a','b'], //约定数据容器的后缀；
 };
+
+
+$scope.com_lista = {
+    params:{},  //传给后端的参数放这里
+    data:[],  //后端返回数据放这里
+    before:function(sco){},  //传之前进行处理，return false；可以终止提交.sco是ctrl控制器的$scope;
+    done:function(re,sco){} //后端返回re；sco是ctrl控制器的$scope;
+  };
+
 //业务逻辑块 ============================================================================
-var main = {
-  // 主控制器初始化
-  ctrl_init:function(sco) {
-     //设置hash，html路径，hash参数
-     sco.dealhash(location.href,sco);  
-     // 调用，初始化让$scope有这些数据
-     sco.init(sco);
-     //调用公共业务：获取省份
-     sco.com_lista.url = 'Open/prov';
+var main = { 
+  ctrl_init:function(sco) {// 主控制器初始化 
+     sco.com_lista.url = 'Open/prov';//调用公共业务：获取省份
      sco.fetch('com_lista');
-     sco.com_lista.done = function(re,sco){ 
-          //调用公共业务：获取城市 
-          sco.fetch('com_listb');
+     sco.com_lista.done = function(re,sco){          
+          sco.fetch('com_listb'); //调用公共业务：获取城市 
      }
 
-     //调用公共业务：获取城市
-     sco.com_listb.url = 'Open/city'; 
+     sco.com_listb.url = 'Open/city'; //调用公共业务：获取城市 
      sco.com_listb.params = {pid:17};  
-
-     //定义变量
-     sco.ystab = 0;
-
-
-
-  },
-  //页面1业务逻辑
-  pageone:function(sco) {  
-      sco.YS_lista.url = 'abc/aa';
-      sco.fetch('YS_plista'); 
-     sco.fetch('com_listb'); 
-  },
-    //页面2业务逻辑
-  city:function(sco) {
-      //业务：设定采集，温度  
-      
-  },
-  //更多页面业务逻辑，往下添加
-  mattertpl:function(sco) {
-
+  }, 
+  city:function(sco) { //城市管理模块 
+      sco.YS_obja.url = 'Index/edit_template';//业务：设定采集，温度
+  }, 
+  mattertpl:function(sco) { //原材管理模块 
      sco.YS_plista.url = 'Index/system_mattertpl_list';
      sco.fetch('YS_plista');
- 
+
+     sco.com_add.url = 'Auth/comadd';//设置新增原材的路径
+     sco.com_add.url = 'Auth/comdel';//设置新增原材的路径
   },
-  tongbiao:function(sco) {
-    //专业列表
-     sco.YS_lista.url = 'Index/major_select';
+  tongbiao:function(sco) { //省同表管理模块   
+     sco.YS_lista.url = 'Index/major_select';//专业列表
      sco.fetch('YS_lista');
 
-     //新增专业
-     sco.YS_obja.url = 'Index/major_add'; 
+     sco.YS_obja.url = 'Index/major_add';//新增专业
 
-    //资料列表     
-     sco.YS_listb.url = 'Index/archive_select';
+     sco.YS_listb.url = 'Index/archive_select';//资料列表 
      sco.fetch('YS_listb');
-
-     //新增资料
-     sco.YS_objb.url = 'Index/archive_add'; 
+     
+     sco.YS_objb.url = 'Index/archive_add';//新增资料 
   },
-  weather:function(sco) {
-          //天气列表
-     sco.YS_plista.url = 'Index/service_weather_list';
-     // sco.fetch('YS_plista');
+  weather:function(sco) { //温度管理模块 
+     sco.YS_plista.url = 'Index/service_weather_list'; //设置天气列表url 
   },
-  userlist:function(sco) {
-     //用户列表
-     sco.YS_plista.url = 'Index/operate_user_list';
-     sco.YS_plista.params.userid = 123;
+  userlist:function(sco) {//用户管理模块 
+     sco.YS_plista.url = 'Index/operate_user_list';//获取用户列表 
      sco.fetch('YS_plista');
-
-    //登陆日志  
+      
      sco.YS_plistb.page = true;  
-     sco.YS_plistb.url = 'Index/operate_login_list';
-     // sco.fetch('YS_plistb');
-    
-    //汇总登陆     
-     sco.YS_lista.url = 'Index/loginStatistic';
-     // sco.fetch('YS_lista');
+     sco.YS_plistb.url = 'Index/operate_login_list'; //登陆日志   
+        
+     sco.YS_lista.url = 'Index/loginStatistic'; //汇总登陆 
   },
-  programcount:function(sco) {
-          //项目列表
-     sco.YS_plista.url = 'Index/operate_pro_list';
+  programcount:function(sco) {          
+     sco.YS_plista.url = 'Index/operate_pro_list';//项目列表
      sco.fetch('YS_plista');
-  } 
-
-
-
+  }
 }; 
 //初始化控制器 ============================================================================
 var app = angular.module("app", []);
 //过滤html 
- app.filter("htmlfil",["$sce",function($sce){ 
-        return function(text){ return $sce.trustAsHtml(text);};
-    }]);  
+app.filter("htmlfil",["$sce",function($sce){ 
+  return function(text){ return $sce.trustAsHtml(text);};
+}]);  
 app.controller('ctrl', ['$scope','$http',function($scope,$http){ 
 //初始化
 $scope.conf = conf;
 $scope.main = main;  
 $scope.$http = $http;
 $scope.value = {};//备用与增加或者编辑
-//存放容器 html路径,模块路径，hash参数对象
- $scope.body = {url:'',path:'',hashobj:{}};   
+$scope.ystab = 0; //定义tab切换变量
+//存放 html路径,模块路径，hash参数对象
+$scope.hrefinfo = {url:'',path:'',hashobj:{}};   
 //初始化公共
-$scope['com_del'] = {params:{},data:{}};//公共删除
-$scope['com_add'] = {params:{},data:{}};//公共增加
+$scope.com_del = {params:{},data:{}};//公共删除
+$scope.com_add = {params:{},data:{}};//公共增加
 
-['a','b','c','d'].map(function(elem) {
+conf.subfix.map(function(elem) { //定义接口数据容器
  $scope['com_obj'+elem] = {params:{},data:{}};
  $scope['com_list'+elem] = {params:{},data:[]};
- $scope['com_plist'+elem]  = {params:{listnum:10,curPage:1},data:{datalist:[]}};
+ $scope['com_plist'+elem]  = {page:true,params:{listnum:10,curPage:1},data:{datalist:[]}};
 
  $scope['YS_list'+elem] = {params:{},data:[]};
- $scope['YS_plist'+elem]  = {params:{listnum:10,curPage:1},data:{datalist:[]}};
+ $scope['YS_plist'+elem]  = {page:true,params:{listnum:10,curPage:1},data:{datalist:[]}};
  $scope['YS_obj'+elem] = {params:{},data:{}};
-});
-$scope.init = function(sco) { 
- ['a','b','c','d'].map(function(elem) { 
- sco['YS_list'+elem] = {params:{},data:[]};
- sco['YS_plist'+elem]  = {params:{listnum:10,curPage:1},data:{datalist:[]}}; 
- sco['YS_obj'+elem] = {params:{},data:{}};
 }); 
-  //找到相关的模块，传入$scope,执行这个函数
-  main[sco.body.path]&&main[sco.body.path](sco);
-} 
-//处理html路径，模块路径，hash的参数对象
-$scope.dealhash = function(str,sco){ 
+
+$scope.fetch = function(key){//定义公共方法：请求函数 
+ YSfac.fetdata($scope,key); 
+}; 
+
+$scope.dealhash = function(str,sco){ //定义处理html路径，模块路径，hash的参数对象的方法
   var url = str.split('#/'); 
-  sco.body.url = conf.index;
+  sco.hrefinfo.url = conf.index;
   if(url[1]){
     var key = url[1].split('?'); 
-    sco.body.url = conf.tplpath +'/'+ key[0]+'.html?time='+YSfac.time();
-    sco.body.path = key[0];
-    key[1]&&(sco.body.hashobj = YSfac.hashToobj(key[1])); 
+    sco.hrefinfo.url = conf.tplpath +'/'+ key[0]+'.html?time='+YSfac.time();
+    sco.hrefinfo.path = key[0];
+    key[1]&&(sco.hrefinfo.hashobj = YSfac.hashToobj(key[1])); 
   } 
-} 
-//定义公共方法：请求函数
-$scope.fetch = function(key){ 
- YSfac.fetdata($scope,key); 
-};
- 
+}
+$scope.dealhash(location.href,$scope); //调用方法，设置hash，html路径，hash参数  
 
-// hash切换
-window.onhashchange = function(){
+$scope.init = function(sco) { //初始化每一个模块的数据容器
+ conf.subfix.map(function(elem) { 
+ sco['YS_list'+elem] = {params:{},data:[]};
+ sco['YS_plist'+elem]  = {page:true,params:{listnum:10,curPage:1},data:{datalist:[]}}; 
+ sco['YS_obj'+elem] = {params:{},data:{}};
+});  
+main[sco.hrefinfo.path]&&main[sco.hrefinfo.path](sco);//找到相关的模块，传入$scope,执行这个函数
+}
+$scope.init($scope);// 调用，初始化让$scope有这些数据 
+
+window.onhashchange = function(){// hash变化，要执行两个方法
   $scope.dealhash(location.href,$scope);
   $scope.init($scope);
   $scope.$apply();
-}; 
-//初始化ctrl，执行一些方法，
-main.ctrl_init($scope);  
+};
+
+main.ctrl_init($scope);//初始化ctrl，执行一些方法  
 console.log($scope);
 }]);
 //公共指令 ============================================================================
@@ -211,7 +150,8 @@ app.directive('ysenter', function(){
 return { 
 link: function(sco, iElm, iAttrs) {
         iElm.on("keyup",function(e){ 
-           e.keyCode==13&&sco.fetch(iAttrs.ysenter);
+          var ctrlsco = YSfac.getscope_byid(sco,2);
+          e.keyCode==13&&ctrlsco.fetch(iAttrs.ysenter);
         });
      }
 };
@@ -222,11 +162,12 @@ app.directive('yschkall', function(){
 return { 
 link: function(sco, iElm, iAttrs) {
         iElm.on("click",function(e){ 
+           var ctrlsco = YSfac.getscope_byid(sco,2); 
            var arr = iAttrs.yschkall.split('.'); 
-           var list = sco; 
+           var list = ctrlsco; 
            arr.map(function(el){list = list[el];}); 
            list.map(function(el){el.ischk = iElm.is(':checked');});
-           sco.$apply(); 
+           ctrlsco.$apply(); 
         });
      }
 };
@@ -237,17 +178,17 @@ link: function(sco, iElm, iAttrs) {
 app.directive('setvalue', function(){ 
 return { 
 link: function(sco, iElm, iAttrs) {
-        iElm.on("click",function(e){ 
-          debugger;
+        iElm.on("click",function(e){
+           var ctrlsco = YSfac.getscope_byid(sco,2);
            var arr = iAttrs.setvalue.split('.'); 
-           var obj = sco;
+           var obj = ctrlsco;
            var key = '';
            arr.map(function(el,ind){ 
             ind<arr.length-1&&(obj = obj[el]);
             ind==arr.length-1&&(key=el);
           });
            obj[key] = iAttrs.value; 
-           sco.$apply(); 
+           ctrlsco.$apply(); 
         });
      }
 };
@@ -258,11 +199,12 @@ link: function(sco, iElm, iAttrs) {
 app.directive('ysaddrun', function(){ 
 return { 
 link: function(sco, iElm, iAttrs) {
-        iElm.on("click",function(e){ 
+        iElm.on("click",function(e){
+           var ctrlsco = YSfac.getscope_byid(sco,2); 
            var arr = iAttrs.ysaddrun.split('.'); 
-           var list = sco; 
+           var list = ctrlsco; 
            arr.map(function(el){list = list[el];}); 
-              sco.com_add.done = function(re,sco) {
+              ctrlsco.com_add.done = function(re,sco) {
                 if(re.code==1){ 
                   list.unshift(re.data); 
                   YS('layer',function() {layer.msg('成功');});
@@ -270,19 +212,20 @@ link: function(sco, iElm, iAttrs) {
                   YS('layer',function() {layer.msg('失败');});
                 }
               }
-              sco.fetch('com_add'); 
+              ctrlsco.fetch('com_add'); 
         });
      }
 };
 }); 
 
-//公共编辑  ysedit='YS_obja.params'  
+//公共编辑,写法：  ysedit='YS_obja.params'  
 app.directive('ysaddedit', function(){ 
 return { 
 link: function(sco, iElm, iAttrs) {
         iElm.on("click",function(e){
+           var ctrlsco = YSfac.getscope_byid(sco,2); 
            var arr = iAttrs.ysadd.split('.'); 
-           var list = sco; 
+           var list = ctrlsco; 
            arr.map(function(el){list = list[el];});
 
                
@@ -297,15 +240,16 @@ app.directive('ysselrun', function(){
 return { 
 link: function(sco, iElm, iAttrs) {
         iElm.on("change",function(e){ 
+           var ctrlsco = YSfac.getscope_byid(sco,2); 
            var arr = iAttrs.ysselrun.split('.'); 
-           var obj = sco;
+           var obj = ctrlsco;
            var key = '';
            arr.map(function(el,ind){ 
             ind<arr.length-1&&(obj = obj[el]);
             ind==arr.length-1&&(key=el);
           });
            obj[key] = iElm.val();
-           sco.fetch(arr[0]);
+           ctrlsco.fetch(arr[0]);
         });
      }
 };
@@ -316,8 +260,9 @@ app.directive('yssel', function(){
 return { 
 link: function(sco, iElm, iAttrs) {
         iElm.on("change",function(e){ 
+           var ctrlsco = YSfac.getscope_byid(sco,2); 
            var arr = iAttrs.yssel.split('.'); 
-           var obj = sco;
+           var obj = ctrlsco;
            var key = '';
            arr.map(function(el,ind){ 
             ind<arr.length-1&&(obj = obj[el]);
@@ -330,12 +275,12 @@ link: function(sco, iElm, iAttrs) {
 }); 
 
 //公共切换tab的值
-app.directive('changetab', function(){ 
+app.directive('setystab', function(){ 
 return { 
 link: function(sco, iElm, iAttrs) {
         iElm.on("click",function(e){ 
           var ctrlsco = YSfac.getscope_byid(sco,2);
-            ctrlsco.ystab = iAttrs.changetab;
+            ctrlsco.ystab = iAttrs.setystab;
             ctrlsco.$apply();
         });
      }
@@ -347,8 +292,9 @@ app.directive('ysdel', function(){
 return { 
 link: function(sco, iElm, iAttrs) {
         iElm.on("click",function(e){ 
+           var ctrlsco = YSfac.getscope_byid(sco,2);
            var arr = iAttrs.ysdel.split('.'); 
-           var list = sco;
+           var list = ctrlsco;
            arr.map(function(el){list = list[el];}); 
            var delids = [];
            list.map(function(el){el.ischk&&delids.push(el[iAttrs.delkey]);}); 
@@ -357,8 +303,8 @@ link: function(sco, iElm, iAttrs) {
                  var layercon = layer.confirm('您确定要删除么？', {
                     btn: ['确定','取消'] //按钮
                   }, function(){ 
-                    sco.com_del.params[iAttrs.delkey] = delids.join(','); 
-                    sco.com_del.done = function(re,sco) {
+                    ctrlsco.com_del.params[iAttrs.delkey] = delids.join(','); 
+                    ctrlsco.com_del.done = function(re,sco) {
                       if(re.code==1){
                         list.map(function(el){el.ischk&&(el.isdel = 1);});
                         layer.msg('删除成功');
@@ -366,7 +312,7 @@ link: function(sco, iElm, iAttrs) {
                         layer.msg('删除失败');
                       }
                     }
-                    sco.fetch('com_del');
+                    ctrlsco.fetch('com_del');
                     layer.close(layercon);
                   }); 
             });  
@@ -380,13 +326,14 @@ app.directive('ysdelone', function(){
 return { 
 link: function(sco, iElm, iAttrs) {
         iElm.on("click",function(e){
+          var ctrlsco = YSfac.getscope_byid(sco,2);
             var _sco = sco;  
             YS('layer',function() {//引入layer弹窗  
             var layercon = layer.confirm('您确定要删除么？', {
               btn: ['确定','取消'] //按钮
             }, function(){ 
-              sco.com_del.params[iAttrs.ysdelone] = sco.value[iAttrs.ysdelone]; 
-              sco.com_del.done = function(re,sco) {
+              ctrlsco.com_del.params[iAttrs.ysdelone] = sco.value[iAttrs.ysdelone]; 
+              ctrlsco.com_del.done = function(re,sco) {
                 if(re.code==1){
                   _sco.value.isdel = 1;
                   layer.msg('删除成功');
@@ -394,7 +341,7 @@ link: function(sco, iElm, iAttrs) {
                   layer.msg('删除失败');
                 }
               }
-              sco.fetch('com_del');
+              ctrlsco.fetch('com_del');
               layer.close(layercon);
             }); 
             });  
@@ -459,7 +406,7 @@ if(!path){console.log(key+'未配置路径信息，可conf中配置或者给sco.
 url += path + (sco.conf.debug&&'.json'); 
 load = (sco[key]&&sco[key].load)||(sco.conf[key]&&sco.conf[key].load);
 page = (sco[key]&&sco[key].page)||(sco.conf[key]&&sco.conf[key].page);
-method = (sco[key]&&sco[key].method)||(sco.conf[key]&&sco.conf[key].method);
+method = (sco[key]&&sco[key].method)||(sco.conf[key]&&sco.conf[key].method)||'GET';
 method = sco.conf.debug?'GET':method;
 
 

@@ -7,10 +7,10 @@
 				 <div class="am-g">
         <div class="am-u-sm-12 am-u-md-6">
          <div class="am-form-group">
-            <select ysselrun="com_listb.params.pid"  data-am-selected="{btnSize: 'sm'}">
-              <option  value="">选择省份</option> 
-              <option ng-repeat="(key, value) in com_lista.data" value="{{value.pid}}">{{value.province}}</option> 
-            </select> 
+<select ysselrun="com_listb.params.pid">
+  <option  value="">选择省份</option> 
+  <option ng-repeat="(key, value) in com_lista.data" value="{{value.pid}}">{{value.province}}</option> 
+</select> 
             
           </div>
         </div>
@@ -38,26 +38,23 @@
                         </tr>
 
                     </thead>
-                    <tbody>
-                        <tr align="center"  ng-repeat="(key, value) in com_listb.data" >
-                            
-         <td >{{value.ctid}}</td>        
-
-         <td> <input type="text" name="city" value="{{value.city}}" style="width: 100%"></td> 
-
-         <td> <input class="w_p100 pl_5" style="text-align: left;" type="text" name="weatherurl" value="{{value.weatherurl}}"></td> 
-         <td>
-                               <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" checkedit='cornot' value="{{value.cornot}}" class="colored-blue" ng-checked="value.cornot == 1">
-                                        <span class="text"></span>
-                                    </label>
-                                </div>
-          
-         </td>
-      
-           <td width="120">{{value.lastupdate*1000|date:'yyyy-MM-dd'}}</td> 
-          </tr>
+<tbody>
+  <tr align="center"  ng-repeat="(key, value) in com_listb.data">
+    <td >{{value.ctid}}</td> 
+    <td>
+      <input type="text" name="city" value="{{value.city}}" style="width: 100%"></td>
+    <td>
+      <input class="w_p100 pl_5" value="{{value.weatherurl}}" style="text-align: left;" type="text" name="weatherurl"></td>
+    <td>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" checkedit='cornot' value="{{value.cornot}}" class="colored-blue" ng-checked="value.cornot == 1">                    
+          <span class="text"></span>
+        </label>
+      </div> 
+    </td> 
+    <td width="120">{{value.lastupdate*1000|date:'yyyy-MM-dd'}}</td>
+  </tr>
 </tbody>
  </table>
              <div style="text-align: center;" id="YS_plista">

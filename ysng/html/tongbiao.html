@@ -6,10 +6,10 @@
         <div class="am-tab-panel am-fade am-in am-active" id="tab1"> 
   
 <!-- 专业列表 -->
-<div ng-show="ystab==0" a='{{ystab}}'>
+<div ng-if="ystab==0" a='{{ystab}}'>
 	  <div class="am-g">
         <div class="am-u-sm-12 am-u-md-6"> 
-        <button type="button" changetab='1' class="am-btn am-btn-default"><span class="am-icon-plus"></span> 新增专业</button>
+        <button type="button" setystab='1' class="am-btn am-btn-default"><span class="am-icon-plus"></span> 新增专业</button>
         </div>
         <div class="am-u-sm-12 am-u-md-3"> 
         </div>
@@ -72,7 +72,7 @@
 
 
              <!-- 新增专业 -->
-        <div ng-show="ystab==1" style="margin-top: 30px;">
+        <div ng-if="ystab==1" style="margin-top: 30px;">
         <form class="am-form">
             <div class="am-g am-margin-top-sm">
               <div class="am-u-sm-4 am-u-md-2 am-text-right">
@@ -115,7 +115,7 @@
 
           <div class="am-margin">
       <button type="button" class="am-btn am-btn-primary am-btn-xs" ysfetch="YS_obja">提交</button>
-      <button type="button" class="am-btn am-btn-primary am-btn-xs" changetab="0">返回</button>
+      <button type="button" class="am-btn am-btn-primary am-btn-xs" setystab="0">返回</button>
     </div>
         </div>
         <!--  新增专业 -->
@@ -125,8 +125,8 @@
          <div ng-show="ystab==2"  > 
 	  <div class="am-g">
         <div class="am-u-sm-12 am-u-md-6"> 
-        <button type="button" changetab='3' class="am-btn am-btn-default"><span class="am-icon-plus"></span> 新增菜单</button>
-         <button type="button" changetab='0' class="am-btn am-btn-default"><span class="am-icon-plus"></span> 返回</button>
+        <button type="button" setystab='3' class="am-btn am-btn-default"><span class="am-icon-plus"></span> 新增菜单</button>
+         <button type="button" setystab='0' class="am-btn am-btn-default"><span class="am-icon-plus"></span> 返回</button>
         </div>
         <div class="am-u-sm-12 am-u-md-3"> 
         </div>
@@ -167,7 +167,7 @@
                              </td> 
                              <td> 
                                <div class="comment_option">
-                                 <a  changetab="3" class=" hand">新增子菜单</a>
+                                 <a  setystab="3" class=" hand">新增子菜单</a>
                                  <a  yseditadd="com_editadd4" tapshow="3" ng-if="value.type=='dir'" class="ml_10 hand">编辑</a>
                                  <a class="ml_10 hand" comdelones="com_del2">删除</a>
                                </div>
@@ -250,7 +250,7 @@
           </form> 
           <div class="am-margin">
       <button type="button" class="am-btn am-btn-primary am-btn-xs">提交</button>
-      <button type="button" class="am-btn am-btn-primary am-btn-xs"  changetab="2">返回</button>
+      <button type="button" class="am-btn am-btn-primary am-btn-xs"  setystab="2">返回</button>
     </div>
         </div> 
           <!-- 新增菜单 -->  

@@ -35,7 +35,7 @@ if(!path){console.log(key+'未配置路径信息，可conf中配置或者给sco.
 url += path + (sco.conf.debug&&'.json'); 
 load = (sco[key]&&sco[key].load)||(sco.conf[key]&&sco.conf[key].load);
 page = (sco[key]&&sco[key].page)||(sco.conf[key]&&sco.conf[key].page);
-method = (sco[key]&&sco[key].method)||(sco.conf[key]&&sco.conf[key].method);
+method = (sco[key]&&sco[key].method)||(sco.conf[key]&&sco.conf[key].method)||'GET';
 method = sco.conf.debug?'GET':method;
 
 
